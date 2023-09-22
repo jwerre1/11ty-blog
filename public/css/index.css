@@ -2,6 +2,7 @@
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+	--font-family-roboto: font-family: 'Roboto', sans-serif;
 }
 
 /* Theme colors */
@@ -267,4 +268,10 @@ a[href].header-anchor:focus,
 
 h2 + .header-anchor {
 	font-size: 1.5em;
+}
+
+.font-roboto {
+	font-family: var(--font-family-roboto);
+	font-weight: 500;
+	font-size: 1.2rem;
 }
