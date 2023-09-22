@@ -1,8 +1,8 @@
 module.exports = {
 	title: "Plymouth Ward Elders Quorum",
-	url: "https://example.com/",
+	url: "https://plymouth-ward-eq.netlify.app/",
 	language: "en",
-	description: "I am writing about my experiences as a naval navel-gazer.",
+	description: "Plymouth Ward Elders Quorum",
 	author: {
 		name: "Jordan W",
 		email: "werr0018@gmail.com",
