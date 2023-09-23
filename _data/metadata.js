@@ -1,6 +1,6 @@
 module.exports = {
 	title: "Working In Light: A Blog",
-	url: "https://plymouth-ward-eq.netlify.app/",
+	url: "https://working-in-light.netlify.app/",
 	language: "en",
 	description: "The Lord God worketh not in darkness. (2 Nephi 26:23)",
 	author: {
