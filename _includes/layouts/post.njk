@@ -5,23 +5,25 @@ layout: layouts/base.njk
 {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
 {%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
 
-<div class="mt-8 prose prose-slate dark:prose-invert mx-auto lg:prose-lg prose-h2:mb-2 prose-h3:my-2 prose-blockquote:mt-4">
-<h2>{{ title }}</h2>
-<div class="not-prose mb-2">
-	<p>{{ subtitle }}</p>
+<div class="mt-8 prose prose-slate dark:prose-invert mx-auto prose-lg prose-h2:mb-2 prose-h3:my-2 prose-blockquote:mt-4 prose-blockquote:mb-0">
+<h1 class="mb-8">{{ title }}</h1>
+<div class="not-prose">
+	<p><strong>{{ subtitle }}</strong></p>
 	<p>
 		<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
 	</p>
 </div>
 
-<ul class="not-prose">
-	{%- for tag in tags | filterTagList %}
-	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
-	{%- endfor %}
-</ul>
+<div>
+	<ul class="not-prose">
+		{%- for tag in tags | filterTagList %}
+		{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+		<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
+		{%- endfor %}
+	</ul>
+</div>
 
-<p class="lead">{{ description }}</p>
+<p class="lead mt-10">{{ description }}</p>
 
 {{ content | safe }}
 
